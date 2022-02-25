@@ -3,7 +3,9 @@ import axios from "axios";
 import { ILink } from "type";
 
 const fetchGetLinks = async (): Promise<ILink[]> => {
-  const response = await axios(`/api/links`);
+  const proxy = process.env.NODE_ENV === "development" ? "" : "/api";
+
+  const response = await axios(`${proxy}/links`);
   return response.data;
 };
 
