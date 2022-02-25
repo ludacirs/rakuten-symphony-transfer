@@ -1,14 +1,9 @@
 import { differenceInMinutes, format } from "date-fns";
-import {
-  FIXED_DAY,
-  TIME_OVER,
-  TIME_STAMP,
-  TimeStampForHuman,
-} from "./constants";
+import { TIME_OVER, TIME_STAMP, TimeStampForHuman } from "./constants";
 const TWO = 2;
 
 export const getExpirationDate = (expires_at: number) => {
-  const currentDate = FIXED_DAY;
+  const currentDate = new Date();
   const expirationTimeStamp = differenceInMinutes(
     expires_at * TIME_STAMP,
     currentDate
