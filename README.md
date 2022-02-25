@@ -1,5 +1,9 @@
 # 기술 과제
 
+## 배포
+
+[배포 주소](https://vibrant-turing-05fbb3.netlify.app/)
+
 ## 빌드 & 실행
 
 ```
