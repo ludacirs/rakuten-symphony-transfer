@@ -3,7 +3,7 @@ import axios from "axios";
 import { ILink } from "type";
 
 const fetchGetLinks = async (): Promise<ILink[]> => {
-  const response = await axios("/links");
+  const response = await axios(`/api/links`);
   return response.data;
 };
 
